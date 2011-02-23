@@ -1,0 +1,9 @@
+
+calendar: main.o
+	g++ main.o -o calendar -lQtGui -lQtCore --include-dir=/usr/include/qt4
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+clean:
+	rm -f *.o calendar
